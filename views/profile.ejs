@@ -1,0 +1,23 @@
+<center>
+    <h1>Perusahaan kami bergerak di bidang kuliner</h1>
+
+    <table border="1">
+        <tr class="header">
+            <td>Nama</td>
+            <td>Jabatan</td>
+            <td>Gaji</td>
+            <td colspan="2">Action</td>
+        </tr>
+        <% data.forEach(row => { %>
+            <tr>
+                <td><%= row.employeeName %></td>
+                <td><%= row.position %></td>
+                <td><%= row.salary %></td>
+                <td><a href="/edit-employee/<%= row._id %>">Edit</a></td>
+                <td><a href="/delete-employee/<no%= row._id %>">Hapus</a></td>
+            </tr>
+        
+        <% }) %>
+
+    </table>
+</center>
